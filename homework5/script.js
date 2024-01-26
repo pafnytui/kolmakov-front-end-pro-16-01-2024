@@ -48,6 +48,8 @@ function getUserInfo() {
 
         if (sportsChampions[sport]) {
             message += `Круто! Хочешь стать ${sportsChampions[sport]}?`;
+        } else if (sport === null) {
+            message += 'Жаль что вы не увлекаитесь спортом :(';
         } else if(sport.trim() === '') {
             message += 'Жаль что вы не увлекаитесь спортом :(';
         } else {

@@ -2,11 +2,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-text-color: #ece89d;
+  --main-bg-color: #18b5a4;
+  --main-body-color: #5e5373;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background-color: #fafafa;
+  background-color: var(--main-body-color);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 p {
@@ -25,6 +38,9 @@ a {
   max-width: 1200px;
   padding: 16px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .homeworks {
@@ -45,6 +61,91 @@ a {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgb(100, 100, 148);
+  background-color: var(--main-bg-color);
   border-radius: 8px;
+  color: var(--main-text-color);
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.cycles {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  background-color: var(--main-bg-color);
+  border-radius: 12px;
+}
+.cycles__title {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  margin: 50px 0;
+  color: var(--main-text-color);
+}
+.cycles__list {
+  display: flex;
+  flex-direction: column;
+}
+.cycles__list-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: var(--main-body-color);
+  background-color: var(--main-text-color);
+  border-radius: 12px;
+  margin: 0 25px 25px 25px;
+  padding: 16px;
+  cursor: pointer;
+}
+.cycles__list-item-result {
+  display: none;
+  margin: 0 25px;
+  padding: 16px;
+  border-radius: 0 0 12px 12px;
+  background-color: var(--main-text-color);
+  margin-bottom: 25px;
+}
+.cycles__list-item-result p {
+  display: flex;
+  gap: 25px;
+  color: var(--main-body-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.cycles__list-item-result p span {
+  color: var(--main-bg-color);
+}
+.cycles__list-item div {
+  flex: 0 0 40px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 40px solid var(--main-body-color);
+  border-bottom: 20px solid transparent;
+  transform: rotate(0deg);
+  transition: all 0.4s ease-out;
+}
+.cycles__list-item span {
+  display: block;
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.cycles__list-item-active {
+  margin-bottom: 0;
+  border-radius: 12px 12px 0 0;
+}
+.cycles__list-item-active div {
+  transform: rotate(90deg);
+  transition: all 0.4s ease-out;
+}
+.cycles__list-item-active + .cycles__list-item-result {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

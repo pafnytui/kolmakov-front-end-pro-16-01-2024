@@ -117,7 +117,7 @@ const operationFour = () => {
                 }
             }
             elementFour.classList.add("cycles__list-item-active");
-            if(isNumberSimple)  {
+            if (isNumberSimple) {
                 resultFour.innerHTML = `<p><span>Результат:</span>Ваше число "${num}" является простым</p>`;
             } else {
                 resultFour.innerHTML = `<p><span>Результат:</span>Ваше число "${num}" не является простым</p>`;
@@ -148,7 +148,7 @@ const operationFive = () => {
                 currentNumber *= 3;
             }
             elementFive.classList.add("cycles__list-item-active");
-            if(isPowerOfThree)  {
+            if (isPowerOfThree) {
                 resultFive.innerHTML = `<p><span>Результат:</span>Ваше число "${num}" можно получить сведением числа 3 в некоторую степень.</p>`;
             } else {
                 resultFive.innerHTML = `<p><span>Результат:</span>Ваше число "${num}" не можно получить сведением числа 3 в некоторую степень.</p>`;

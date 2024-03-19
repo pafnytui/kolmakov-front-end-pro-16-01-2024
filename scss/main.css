@@ -148,4 +148,27 @@ a {
 }
 .cycles__list-item-active + .cycles__list-item-result {
   display: block;
+}
+
+.table-container {
+  display: flex;
+  max-width: 600px;
+  margin: 40px auto;
+}
+.table-box {
+  width: 40px;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+  text-align: center;
+}
+
+.image-container {
+  max-width: 600px;
+  margin: 40px auto;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */

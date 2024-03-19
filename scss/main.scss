@@ -152,3 +152,29 @@ a {
         }
     }
 }
+
+.table {
+    &-container {
+        display: flex;
+        max-width: 600px;
+        margin: 40px auto;
+    }
+    &-box {
+        width: 40px;
+        border: 1px solid var(--main-text-color);
+        color: var(--main-text-color);
+        text-align: center;
+    }
+}
+
+.image {
+    &-container {
+        max-width: 600px;
+        margin: 40px auto;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,11 +1,7 @@
 const getPicture =  () => {
     let container = document.querySelector('.image-container');
     
-    let numOfimg = Math.round(Math.random() * 9);
-
-    if (numOfimg === 0) {
-        numOfimg = 1;
-    }
+    let numOfimg = Math.floor((Math.random() * 9) + 1);
 
     container.innerHTML = `<img src="img/${numOfimg}.jpg" alt="picutres">`;
 };
